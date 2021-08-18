@@ -1,0 +1,66 @@
+<div>
+	<!-- theme setting -->
+	<a href="javascript:void(0)">
+		<div (click)="layoutSidebarToggle()" class="setting-sidebar" id="setting-icon">
+			<div>
+				<i aria-hidden="true" class="fa fa-cog"></i>
+			</div>
+		</div>
+	</a>
+	<div [class.opensetting]="layoutsidebar" class="setting-box" id="setting_box">
+		<a (click)="layoutSidebarToggle()" class="overlay" href="javascript:void(0)"></a>
+		<div class="setting_box_body">
+			<div>
+				<div (click)="layoutSidebarToggle()" class="sidebar-back text-left">
+					<i aria-hidden="true" class="fa fa-angle-left pr-2"></i>
+					Back
+				</div>
+			</div>
+			<div class="setting-body">
+				<div (click)="opensettingcontent('color option')" class="setting-title">
+					<h4>
+						color picker
+						<span class="according-menu"></span>
+					</h4>
+				</div>
+				<div [class.opensubmenu]="isActive('color option')" class="setting-contant">
+					<ul class="color-box">
+						<li>
+							<input (change)="customizeThemeColor($event)" id="colorPicker1" name="Background"
+							       type="color"
+							       value="#A527F6">
+							<span>Theme default color</span>
+						</li>
+					</ul>
+				</div>
+				<div (click)="opensettingcontent('rtl')" class="setting-title">
+					<h4>
+						RTL
+						<span class="according-menu"></span>
+					</h4>
+				</div>
+				<div [class.opensubmenu]="isActive('rtl')" class="setting-contant">
+					<ul class="setting_buttons">
+						<li id="ltr_btn">
+							<a (click)="customizeLayoutType('ltr')" class="btn setting_btn" href="javascript:void(0)">
+								LTR
+							</a>
+						</li>
+						<li id="rtl_btn">
+							<a (click)="customizeLayoutType('rtl')" class="btn setting_btn" href="javascript:void(0)">
+								RTL
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- theme setting -->
+	<div class="sidebar-btn dark-light-btn">
+		<div class="dark-light">
+			<div (click)="customizeLayoutDark()" class="theme-layout-version">Dark</div>
+		</div>
+	</div>
+
+</div>
