@@ -76,3 +76,9 @@ typings/
 .fusebox/
 
 /dist
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/multi-shop-frontend.iml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
